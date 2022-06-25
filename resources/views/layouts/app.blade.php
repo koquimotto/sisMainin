@@ -25,7 +25,9 @@
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
     @livewireStyles
+    @stack('styles')
 
 </head>
 
@@ -48,7 +50,7 @@
 
             <div class="page-content">
                 <div class="container-fluid">
-                    
+
                     {{ $slot }}
 
                 </div>
@@ -71,6 +73,9 @@
     </button>
     <!--end back-to-top-->
 
+    <!-- Fontawesome -->
+    <script defer src="https://kit.fontawesome.com/0b902605af.js" crossorigin="anonymous"></script>
+
     <!-- JAVASCRIPT -->
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
@@ -89,12 +94,16 @@
     <!--Swiper slider js-->
     <script src="{{ asset('assets/libs/swiper/swiper-bundle.min.js') }}"></script>
 
+    <!--Sweetalert2 js-->
+    <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+
     <!-- Dashboard init -->
     <script src="{{ asset('assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
 
     <!-- App js -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     @livewireScripts
+    @stack('scripts')
 
 </body>
 
